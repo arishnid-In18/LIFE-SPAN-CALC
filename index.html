@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Life Span Calculator</title>
+    <link rel="icon" href="OIP.jpg">
+
+    <link rel="stylesheet" href="script.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        body {
+            background-color: lightblue;
+            transition: background-color 0.5s ease;
+        }
+
+        body:hover {
+            background-color:lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+
+<center>
+
+    <!-- PAGE 1 -->
+    <div class="container" id="placeholder">
+
+        <h1>WELCOME TO THE LIFE SPAN CALCULATOR</h1>
+
+        <br><br><br>
+
+        <input type="text" id="name" placeholder="ENTER YOUR NAME">
+
+        <br><br><br>
+
+        <input type="date" id="DOB">
+
+        <br><br><br>
+
+        <button onclick="startJourney()">START THE JOURNEY</button>
+
+    </div>
+
+    <!-- PAGE 2 -->
+    <div id="page2" class="container hidden">
+
+        <h1 id="welcomeText"></h1>
+
+        <h2 id="countdown"></h2>
+
+        <div id="ageSection" class="hidden">
+
+            <h2>Your Live Age</h2>
+
+            <p id="years"></p>
+            <p id="days"></p>
+            <p id="hours"></p>
+            <p id="minutes"></p>
+            <p id="seconds"></p>
+
+            <button onclick="showCalculator()">
+                Open Calculator
+            </button>
+
+        </div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div id="page3" class="container hidden">
+
+        <h1>Calculator</h1>
+
+        <input type="text" id="display" readonly>
+
+        <br><br>
+
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button onclick="appendValue('/')">÷</button>
+
+        <br>
+
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button onclick="appendValue('*')">×</button>
+
+        <br>
+
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button onclick="appendValue('-')">−</button>
+
+        <br>
+
+        <button onclick="appendValue('0')">0</button>
+        <button onclick="appendValue('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="appendValue('+')">+</button>
+
+        <br><br>
+
+        <button onclick="clearDisplay()" style="background:red; color:white;">
+            Clear
+        </button>
+
+    </div>
+
+</center>
+
+</body>
+</html>
